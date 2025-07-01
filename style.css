@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-color: #4e2a18;
+    --bg-secundario: #362112;
+    --bg-terciario: #a4461f;
+    --border: #6f310b;
+    --border-secundario: #76350d;
+    --cor-texto-clara: #cfa782;
+    --cor-texto-medio: #ba8e09;
+    
+}
+
+body{
+    height: 100vh;
+    background: var(--bg-color);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+    margin-bottom: 25px;
+    background: #a4461f;
+    border-bottom: 5px solid #d0792d;
+    color: #fee400;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+header span{
+    color: var(--cor-texto-clara);
+}
+
+
+
+
+
+#arenas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#arena-player-1, #arena-player-2{
+    background: var(--bg-secundario);
+    color: var(--cor-texto-medio);
+    border: 2px solid var(--border);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.arena-area{
+    min-height: 200px;
+    padding: 5px;
+    width: 200px;
+
+    color: #793509;
+    border: 2px dashed var(--border);
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+#log{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+#log h2{
+    background: #5b4d46;
+    color: #aea099;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#log-batalha{
+    width: 450px;
+    height: 75px;
+    color: var(--cor-texto-clara);
+    background-color: #351d10;
+    border: 3px solid var(--border-secundario);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#log button{
+    border: none;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btn-iniciar{
+    background: linear-gradient(135deg, #4d1ef6, #2603a3);
+}
+
+#btn-reiniciar{
+    background: linear-gradient(135deg, #545454, #454545);
+}
+
+
+#deck{
+    background: #382212;
+    border: 5px solid var(--border-secundario);
+    border-radius: 25px;
+    margin: 25px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#deck h3{
+    color: var(--cor-texto-medio);
+}
+
+#cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 25px;
+    column-gap: 15px;
+}
+
+
+
+
+
+.card{
+    height: 250px;
+    width: 175px;
+    border-radius: 15px;
+    background: #ece0ba;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: grab;
+    user-select: none;
+
+    position: relative;
+}
+
+.card h2{
+    background-color: var(--bg-terciario);
+    color: #ece0ba;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img{
+    height: 115px;
+    font-size: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status{
+    display: flex;
+    flex-direction: column;
+
+    background: #e3cfa8;
+    border: 2px solid #d6bb93;
+    border-radius: 10px;
+    margin: 0px 10px;
+    padding: 5px;
+    gap: 5px;
+}
+
+.status div{
+    display: flex;
+    justify-content: space-between;
+    color: #94744e;
+}
+
+.atk-card, .hp-card, .spd-card{
+    padding: 2px;
+    border-radius: 5px;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    font-size: .8rem;
+}
+.atk-card{
+    background: #f30439;
+
+}
+
+.hp-card{
+    background: #5641e5;
+}
+
+.spd-card{
+    background: #d8c833;
+}
+
+.type-card{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 27%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--bg-color);
+    padding: 5px;
+    border-radius: 50%;
+    border: 2px solid var(--border-secundario);
+}
